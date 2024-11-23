@@ -67,6 +67,20 @@ namespace Bai._308523_inc {
   @ext(0x7b, 0)
   model CirPump is ReadonlyRegister<onoff>;
 
+  /** d.14 Desired pump power */
+  @inherit(r, wi)
+  @ext(0xa1, 0)
+  model PumpPowerDesired {
+    /** PWM-Desired central heating pump power */
+    @unit("%")
+    @values(Values_PumpPowerDesired)
+    value: UCH;
+  }
+
+  /** d.15 Current pump power: Current central heating pump power */
+  @ext(0x73, 0)
+  model PumpPower is ReadonlyRegister<UCH>;
+
   /** d.16 room thermostat 24 V: External controls heat demand (Clamp 3'-4') */
   @ext(0xe, 0)
   model DCRoomthermostat is ReadonlyRegister<onoff>;
@@ -82,6 +96,10 @@ namespace Bai._308523_inc {
   /** d.25 DHW demand enabled: hot water release (tank storage) via eBus Control */
   @ext(0x47, 0x4)
   model StoragereleaseClock is ReadonlyRegister<yesno>;
+
+  /** d.29 PrimaryCircuitFlowRate_DK: primary circuit water flow rate */
+  @ext(0xfb, 0)
+  model PrimaryCircuitFlowRate is ReadonlyRegister<uin100>;
 
   /** d.30 Gasvalve */
   @inherit(r)
@@ -816,6 +834,15 @@ namespace Bai._308523_inc {
   /** PrEnergyCountCH3_DK: Predictive Maintenance data */
   @ext(0xfa, 0)
   model PrEnergyCountHc3 is InstallRegister<ULG>;
+
+  enum Values_PumpPowerDesired {
+    auto: 0,
+    _53: 1,
+    _60: 2,
+    _70: 3,
+    _85: 4,
+    _100: 5,
+  }
 
   enum Values_Gasvalve {
     off: 240,
