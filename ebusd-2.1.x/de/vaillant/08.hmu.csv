@@ -98,6 +98,7 @@ r,,WP_Kondensatorauslass,T.0.59,,,,3b03ffff,,,SIN,10, C,Temperatur Kondensatorau
 r,,WP_Hochdruck,T.0.63,,,,3f03ffff,,,SIN,10,Bar,Hochdruck,,,,,,,,,,,,,,,,,,
 r,,WP_Niederdruck,T.0.64,,,,4003ffff,,,SIN,10,Bar,Niederdruck,,,,,,,,,,,,,,,,,,
 r,,WP_Hochdruckschalter,T.0.67,,,,4303ffff,,,UCH,,,Hochdruckschalter,,,,,,,,,,,,,,,,,,
+r,,WP_Außentemperatur,T.1.69,,,,4503ffff,,,SIN,10, C,Außentemperatur,,,,,,,,,,,,,,,,,,
 r,,WP_DCF_Status,T.1.71,,,,4703ffff,,,UCH,,,DCF Status,,,,,,,,,,,,,,,,,,
 r,,WP_Sperrkontakt_S21,T.1.72,,,,4803ffff,,,UCH,,,Sperrkontakt S21,,,,,,,,,,,,,,,,,,
 r,,WP_Verdampfungstemperatur,T.0.85,,,,5503ffff,,,SIN,10, C,Verdampfungstemperatur,,,,,,,,,,,,,,,,,,
